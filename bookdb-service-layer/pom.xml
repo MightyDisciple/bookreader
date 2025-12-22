@@ -1,0 +1,58 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Inherit from the parent POM -->
+    <parent>
+        <groupId>com.loopersnest.bookreader</groupId>
+        <artifactId>bookreader-parent</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <artifactId>bookdb-service-layer</artifactId>
+    <packaging>jar</packaging>
+    <name>Service Layer Module</name>
+    <description>Business logic layer</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.loopersnest.bookreader</groupId>
+            <artifactId>bookreaderdb</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <!-- Spring Framework core (for DI, @Service, etc.) -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+        </dependency>
+
+        <!-- Spring Security core if you have business logic rules -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-core</artifactId>
+        </dependency>
+
+        <!-- Optional: Jackson if you need JSON processing inside services -->
+        <!-- Optional: jOOQ if service layer uses SQL DSL -->
+
+        <!-- Testing -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+
+    <!-- Optional: module-specific plugin overrides -->
+    <build>
+        <plugins>
+            <!-- Example: add module-specific compiler args if needed -->
+        </plugins>
+    </build>
+
+</project>

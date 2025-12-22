@@ -1,0 +1,55 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Inherit from the parent POM -->
+    <parent>
+        <groupId>com.loopersnest.bookreader</groupId>
+        <artifactId>bookreader-parent</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <artifactId>bookreaderdb</artifactId>
+    <packaging>jar</packaging>
+    <name>Repository Module</name>
+    <description>Repository layer</description>
+
+    <dependencies>
+        <!-- Spring Data JPA -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
+        <!-- liquibase -->
+         <dependency>
+             <groupId>org.liquibase</groupId>
+             <artifactId>liquibase-core</artifactId>
+         </dependency>
+
+        <!-- Database driver -->
+        <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <version>9.5.0</version>
+        </dependency>
+
+        <!-- Testing -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <!-- Optional: module-specific plugin overrides -->
+    <build>
+        <plugins>
+            <!-- Example: add module-specific compiler args if needed -->
+        </plugins>
+    </build>
+
+</project>

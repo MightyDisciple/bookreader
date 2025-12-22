@@ -1,0 +1,46 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.loopersnest.bookreader</groupId>
+    <artifactId>bookreader-bom</artifactId>
+    <version>1</version>
+    <packaging>pom</packaging>
+    <description>Bill of materials for my third-party dependencies</description>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- spring framework bom -->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-framework-bom</artifactId>
+                <version>7.0.1</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>4.0.0</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!-- spring security bom -->
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-bom</artifactId>
+                <version>7.0.0</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!-- Jooq bom -->
+            <dependency>
+                <groupId>org.jooq</groupId>
+                <artifactId>jooq-bom</artifactId>
+                <version>3.20.9</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
